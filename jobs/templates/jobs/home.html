@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Oskar Żak </title>
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  </head>
+
+  <body>
+
+    
+
+    <main role="main">
+
+      <section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">Oskar Żak</h1>
+          <p class="lead text-muted">Hello! My name is Oskar and Im a graduate of the Kielce University of Technology with a Civil Engineering degree. Currently, Im learning how to create and manage websites.  Personally, Im interested in football and cycling 🙂</p>
+          <p>
+            <a href="mailto:oskarzak1999@gmail.com" class="btn btn-primary my-2">Email Me</a>
+          </p>
+          <img src="{% static 'me.jpg' %}" height=300></img>
+        </div>
+      </section>
+
+      <div class="album py-5 bg-light">
+        <div class="container">
+
+          <div class="row">
+            {% for job in jobs.all %}
+            <div class="col-md-4">
+              <a href="{% url 'detail' job.id %}">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="{{ job.image.url }}" height=250></img>
+                <div class="card-body">
+                  <p class="card-text">{{ job.summary }}</p>
+                </div>
+              </div>
+              </a>
+            </div>
+              {% endfor %}
+
+          </div>
+        </div>
+      </div>
+      
+      <a href="#" class="btn btn-primary back-to-top" role="button">
+        <i class="fas fa-arrow-up"></i>
+      </a>
+
+    </main>
+
+    
+
+    <footer class="bg-dark text-center text-white">
+      <!-- Grid container -->
+      <div class="container p-1 pb-2">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+          <!-- Facebook -->
+          <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/oskar.zak.31/" role="button"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+
+          <!-- Instagram -->
+          <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/oskar.zak.31/" role="button"
+            ><i class="fab fa-instagram"></i
+          ></a>
+    
+          <!-- Linkedin -->
+          <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/oskar-%C5%BCak-726165256/" role="button"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+    
+          <!-- Github -->
+          <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/OskarZak" role="button"
+            ><i class="fab fa-github"></i
+          ></a>
+        </section>
+        <!-- Section: Social media -->
+      </div>
+      <!-- Grid container -->
+    
+      <!-- Copyright -->
+      <div class="text-center p-0" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2020 Copyright
+        <a class="text-white" href="https://mdbootstrap.com/"></a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    
+    
+
+    
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{% static 'js/bootstrap.js' %}" ></script>
+    <script src="{% static 'jquery-3.3.1.min.js' %}" ></script>
+  </body>
+</html>
