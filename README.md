@@ -1,3 +1,3 @@
 # Recipes_Django
 
-Ten projekt przedstawia stworzone portfolio gotowe do hostowania. Dzięki panelowi administracyjnemu można dodawać, usuwać lub modyfikować kolejne elementy.
+This project shows a created portoflio ready to be hosted. Thanks to the admin panel, you can add, delete or modify subsequent items.
